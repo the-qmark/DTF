@@ -6,8 +6,10 @@ using UnityEngine;
 public class PresidentController : MonoBehaviour
 {
     [SerializeField] Animator animator;
-
     [SerializeField] float speedOfWalk;
+
+    const string WALK_ANIM = "Walk";
+    const string DEATH_ANIM = "Death";
 
     private float currentSpeedOfWalk;
 
@@ -24,12 +26,16 @@ public class PresidentController : MonoBehaviour
 
     public void GameStart()
     {
-        animator.SetBool("GameStart", true);
+        //animator.SetBool("GameStart", true);
+        animator.Play(WALK_ANIM);
         currentSpeedOfWalk = speedOfWalk;
     }
 
     public void GameOver()
     {
-        animator.SetBool("GameOver", true);
+        animator.Play(DEATH_ANIM);
     }
 }
+
+
+
