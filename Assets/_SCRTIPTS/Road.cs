@@ -1,28 +1,18 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class Road : MonoBehaviour
 {
     public event UnityAction TriggerReached;
-
-    
-
-    private void Start()
-    {
-
-
-
-    }
+    public float Width => GetComponent<SpriteRenderer>().bounds.size.x;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log("roadroadroadroadroad");
-        if (collision.TryGetComponent(out PresidentController president))
-        {
+        if (collision.TryGetComponent(out PresidentMovement president))
             TriggerReached?.Invoke();
-            //Debug.Log("road");
-        }
     }
 }

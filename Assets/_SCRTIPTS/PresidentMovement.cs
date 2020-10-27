@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.Rendering;
 using UnityEngine;
 
-public class PresidentController : MonoBehaviour
+public class PresidentMovement : MonoBehaviour
 {
     [SerializeField] Animator animator;
     [SerializeField] float speedOfWalk;
@@ -18,7 +18,6 @@ public class PresidentController : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector2.right * currentSpeedOfWalk * Time.deltaTime);
@@ -26,7 +25,6 @@ public class PresidentController : MonoBehaviour
 
     public void GameStart()
     {
-        //animator.SetBool("GameStart", true);
         animator.Play(WALK_ANIM);
         currentSpeedOfWalk = speedOfWalk;
     }
@@ -34,8 +32,6 @@ public class PresidentController : MonoBehaviour
     public void GameOver()
     {
         animator.Play(DEATH_ANIM);
+        currentSpeedOfWalk = 0;
     }
 }
-
-
-
