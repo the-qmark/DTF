@@ -10,7 +10,6 @@ public class IncomeUI : MonoBehaviour
     [Space]
     [SerializeField] private TMP_Text textIncome;
 
-
     private void OnEnable()
     {
         target.IncomeChange += OnIncomeChanged;

@@ -33,13 +33,11 @@ public class RepairPanel : MonoBehaviour
             textFull.text = building.FullRepairCost.ToString() + "$";
 
         CheckBudget(budget.Value);
-        
     }
 
     public void OnBudgetChanged(float _value)
     {
         CheckBudget(_value);
-        //Debug.Log("+++");
     }
 
     private void CheckBudget(float _value)
@@ -59,6 +57,4 @@ public class RepairPanel : MonoBehaviour
         if (budget.BuyIfCan(building.FullRepairCost))
             building.FullRepair();
     }
-
-
 }

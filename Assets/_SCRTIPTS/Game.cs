@@ -34,7 +34,6 @@ public class Game : MonoBehaviour
                 Time.timeScale = 0;
                 menu.SetActive(true);
             }
-
         }
     }
 
@@ -54,14 +53,8 @@ public class Game : MonoBehaviour
          SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void HowToPlay()
-    {
-
-    }
-
     public void Quit()
     {
         Application.Quit();
     }
-
 }

@@ -15,7 +15,6 @@ public class Budget : MonoBehaviour
     private float budget;
     private float allIncome;
 
-
     private void OnEnable()
     {
         foreach (var target in incomeTargets)
@@ -34,8 +33,6 @@ public class Budget : MonoBehaviour
 
     public static Budget GetInit()
     {
-        //if (instance == null)
-        //    instance = new Budget();
         return instance;
     }
 
@@ -83,7 +80,6 @@ public class Budget : MonoBehaviour
         {
             budget += allIncome;
             budget = Mathf.Clamp(budget, 0f, 2000f);
-            //Debug.Log("all " + allIncome);
             BudgetChange?.Invoke(budget);
             yield return oneSec;
         }

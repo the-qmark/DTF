@@ -9,7 +9,7 @@ public class BuildingSpawner : MonoBehaviour
     [Space]
     [SerializeField] private Building[] buildings;
 
-    [SerializeField] private Vector2 pointForSpawn; // &&&&&&&&&&&&&&&&&&
+    [SerializeField] private Vector2 pointForSpawn;
 
     private void OnEnable()
     {
@@ -19,11 +19,6 @@ public class BuildingSpawner : MonoBehaviour
     private void OnDisable()
     {
         roadSpawner.PointReach -= OnPointReached;
-    }
-
-    void Start()
-    {
-
     }
 
     private void OnPointReached()

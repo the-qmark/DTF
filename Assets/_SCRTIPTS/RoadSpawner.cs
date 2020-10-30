@@ -6,8 +6,6 @@ using UnityEngine.Events;
 
 public class RoadSpawner : MonoBehaviour
 {
-    //public SpriteRenderer rrr;
-    
     public event UnityAction PointReach;
 
     [SerializeField] private Camera mainCamera;

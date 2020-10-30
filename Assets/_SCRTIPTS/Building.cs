@@ -1,8 +1,4 @@
-﻿//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEditor.Build.Content;
-using UnityEngine;
-//using UnityEngine.EventSystems;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class Building : MonoBehaviour

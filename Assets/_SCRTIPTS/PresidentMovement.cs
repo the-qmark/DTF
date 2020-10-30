@@ -14,9 +14,14 @@ public class PresidentMovement : MonoBehaviour
 
     private float currentSpeedOfWalk;
 
-    void Start()
+    private void OnEnable()
     {
-        
+        Game.GameOver += OnGameOver;
+    }
+
+    private void OnDisable()
+    {
+        Game.GameOver -= OnGameOver;
     }
 
     void Update()
@@ -31,7 +36,7 @@ public class PresidentMovement : MonoBehaviour
         StartCoroutine(SpeedIncrease());
     }
 
-    public void GameOver()
+    public void OnGameOver()
     {
         animator.Play(DEATH_ANIM);
         currentSpeedOfWalk = 0;

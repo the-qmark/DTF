@@ -29,6 +29,7 @@ public class Score : MonoBehaviour
     public void StartGame()
     {
         currentScore = 0;
+        Time.timeScale = 1;
         StartCoroutine(Counter());
     }
 

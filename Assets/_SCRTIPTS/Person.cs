@@ -24,9 +24,7 @@ public class Person : MonoBehaviour
 
     public void ChangeMood(MoodType _moodType, int _seriousness) // от "серьезности" зависит количество полученного/утраченного настроения
     {
-
         int _moodDelta = Random.Range(_seriousness / 3, _seriousness) * (int)_moodType; // на сколько изменится настроение
-        //Debug.Log("delta " + _moodDelta + "   "  + this.name);
 
         mood += _moodDelta;
         mood = Mathf.Clamp(mood, 0, 100);
