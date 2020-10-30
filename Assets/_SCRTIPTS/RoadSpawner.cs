@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class RoadSpawner : MonoBehaviour
 {
+    //public SpriteRenderer rrr;
+    
+    public event UnityAction PointReach;
+
     [SerializeField] private Camera mainCamera;
 
     private Queue<Road> roadsQueue = new Queue<Road>();
@@ -45,5 +50,7 @@ public class RoadSpawner : MonoBehaviour
             _road.transform.position = _newPosition;
             roadsQueue.Enqueue(roadsQueue.Dequeue());
         }
+
+        PointReach?.Invoke();
     }
 }

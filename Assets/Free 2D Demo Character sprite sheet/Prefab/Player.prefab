@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0206db376cbd6314b97003834852bef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mood: 50
 --- !u!114 &6613078892907900654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 9534654}
-  speedOfWalk: 5
+  speedOfWalk: 7
 --- !u!95 &9534654
 Animator:
   serializedVersion: 3
@@ -238,7 +239,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.02
+  orthographic size: 9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
